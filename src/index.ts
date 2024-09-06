@@ -113,18 +113,12 @@ dbConnect()
       }
     })
 
-
-
-    
-    
   })
   .catch((err) => {
     app.get('/*', (c) => {
       return c.text(`Failed to connect to mongodb: ${err.message}`)
     })
   })
-
-
 
 const port = 3000
 console.log(`Server is running on port ${port}`)
